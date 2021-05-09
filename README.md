@@ -49,7 +49,7 @@ Licence 2 Informatique
 
 ### Download :
 
-git clone https://gitlab.com/Luo-Ying/monitoringapp.git
+git clone https://github.com/Luo-Ying/monitoring.git
 
 
 ### Install dependencies :
