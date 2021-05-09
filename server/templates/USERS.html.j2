@@ -1,0 +1,40 @@
+{% extends "default.html.j2" %}
+
+{% block pageTitle %}
+    Users of computer
+{% endblock %}
+
+{% block content %}
+<div class="w3-row-padding">
+    <div class="w3-margin-bottom">
+      <table class="w3-table w3-light-grey w3-center" style="text-align: center;">
+            <tr class="w3-dark-grey w3-xlarge w3-padding-32">
+                <td>Uers name</td>
+                <td>stat</td>
+                <td>used Disk's space</td>
+                <td>used Mem's space</td>
+            </tr>
+            {% for i in range (0,nbrUsers) %}
+                <tr>
+                    <td>{{ USER[i].userName }}</td>
+                    <td>{{ USER[i].stat }}</td>
+                    <td>{{ USER[i].usedDisk }}</td>
+                    <td>{{ USER[i].usedMem }}</td>
+                </tr>
+            {% endfor %}
+      </table>
+    </div>
+     
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
+
+
+
+
+

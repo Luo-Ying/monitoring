@@ -1,0 +1,44 @@
+{% extends "default.html.j2" %}
+
+{% block pageTitle %}
+    History (20 requets recent)
+{% endblock %}
+
+{% block content %}
+    
+
+<div class="w3-row-padding">
+    <div class="w3-margin-bottom">
+      <table class="w3-table w3-light-grey w3-center" style="text-align: center;">
+            <tr class="w3-dark-grey w3-xlarge w3-padding-32">
+                <td>Number of users online</td>
+                <td>CPU utilisation</td>
+                <td>Hard Disk used space</td>
+                <td>RAM used space</td>
+                <td>ReceiveDate</td>
+            </tr>
+            {% for i in range (0,20) %}
+            <tr>
+                <td>{{ history.NumberOfUsersOnline[i][0] | safe | string }}</td>
+                <td>{{ history.CPUutilisation[i][0] | safe | string }}</td>
+                <td>{{ history.HardDiskUSedSpace[i][0] | safe | string }}</td>
+                <td>{{ history.RAMusedSpace[i][0] | safe | string }}</td>
+                <td>{{ history.ReceiveDate[i][0] | safe | string }}</td>
+            </tr>
+            {% endfor %}
+      </table>
+    </div>
+     
+</div>
+
+
+{% endblock %}
+
+{% block script %}
+
+{% endblock %}
+
+
+
+
+
